@@ -1,0 +1,46 @@
+:root {
+  --bg: #07060d;
+  --panel: #12101c;
+  --line: #2c2638;
+  --text: #f3ead8;
+  --muted: #b3a891;
+  --gold: #f0c065;
+  --ember: #ff9a3c;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% -10%, #2a1a10 0, var(--bg) 60%) no-repeat, var(--bg);
+  color: var(--text);
+  font: 19px/1.6 "EB Garamond", Georgia, serif;
+}
+a { color: var(--gold); }
+a:hover { color: #ffe0a0; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; gap: 12px; padding: 14px 16px; flex-wrap: wrap; }
+header.top img { width: 40px; height: 40px; border-radius: 10px; }
+header.top .brand { font-family: "Cinzel", serif; font-weight: 700; font-size: 20px; letter-spacing: 2px; text-decoration: none; color: var(--gold); }
+header.top nav { margin-left: auto; display: flex; gap: 18px; font-family: "Cinzel", serif; font-size: 15px; }
+header.top nav a { text-decoration: none; color: var(--muted); }
+header.top nav a[aria-current="page"] { color: var(--gold); }
+h1, h2 { font-family: "Cinzel", serif; font-weight: 700; letter-spacing: 1px; line-height: 1.2; }
+h1 { font-size: 36px; margin: 36px 0 12px; color: var(--gold); }
+h2 { font-size: 22px; margin: 36px 0 12px; color: var(--ember); }
+.lede { color: var(--muted); font-size: 21px; margin: 0 0 20px; }
+.hero { display: block; width: 100%; max-width: 360px; margin: 24px auto; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 0 60px rgba(240,160,80,.15); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 16px 0; }
+.card.accent { border-color: rgba(240,192,101,.5); }
+.mail { font-size: 22px; font-weight: 700; word-break: break-all; }
+details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+details summary { cursor: pointer; font-weight: 700; font-size: 20px; }
+details p { color: var(--muted); margin: 8px 0 0; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+.muted { color: var(--muted); }
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 20px 0 36px; color: var(--muted); font-size: 16px; }
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  header.top nav { margin-left: 0; width: 100%; }
+}
